@@ -6,9 +6,10 @@
   a plumb bob and compass with a single digital device. This will save time and money.
 
 ## Goals
-  The goal for this semester is to get each individual component working. There are 6 main components 
-  to this device. So far, each individual component works, and next semester will be incorporating
-  each component with one another to create the final product.
+  The goal for this semester is to get each individual component working. So far, 
+  each individual component works, and next semester will be incorporating
+  each component with one another to create the final product. There are 6 main 
+  components to this device. 
 
 ## Components
 ### ESP32-S3-DevKitC-1 v1.1 (WORKING)
