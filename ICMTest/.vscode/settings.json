@@ -1,0 +1,14 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.flashType": "UART",
+    "idf.portWin": "COM10",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "files.associations": {
+        "icm20948.h": "c",
+        "*.tcc": "c",
+        "regex": "c",
+        "i2c_private.h": "c"
+    }
+}
