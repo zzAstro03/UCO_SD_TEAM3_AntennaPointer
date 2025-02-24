@@ -84,8 +84,8 @@
   to calculate magnetic declination and get the antenna offset. The output screens output the adjusted azimuth
   and elevation from the sensor.
 
-  I designed the keypad in KiCad and had it sent
-  to PCBWay to be created. It is a matrix keypad that has the keys:
+  I designed the keypad in KiCad and had it sent to PCBWay to be created. It is a matrix keypad that has the keys:
+  <br />
   0 1 2 3 4 5 6 7 8 9 . Enter Backspace Up Down Left Right
 
   The circuit and PCB schematics are in the Design folder. 
