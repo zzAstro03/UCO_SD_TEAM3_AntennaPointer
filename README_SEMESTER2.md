@@ -10,7 +10,7 @@
   of things as well.
 
 ## Design
-  The device
+  ...
 
 ## Goals
   For the first semester, the goal was to primarily get a physical design done all of the individual electrical components working. 
