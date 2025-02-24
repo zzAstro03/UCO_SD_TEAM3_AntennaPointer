@@ -39,8 +39,11 @@
   various peripherals. It was chosen due to its widespread support and low power consumption.
   It is currently being programmed via ESP-IDF v5.4.0 with a majority of the code being written in C.
 
-  Documentation:
+  Board:
   https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html
+  <br />
+  ESP-IDF v5.4.0
+  https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32/get-started/index.html
 
 ### ICM20948 (WORKING, NOT IMPLEMENTED, NEEDS CALIBRATION)
   The orientation of the device is determined by an ICM20948. This is a 9 degree of freedom inertial
@@ -71,11 +74,17 @@
 ### ILI9488 TFT LCD Display (WORKING)
   The ILI9488 thin-film-transistor liquid-crystal display is used to display output data and allow
   the user to interact with the device via the keypad. A driver was downloaded from the atanisoft
-  component via the ESP-IDF Component Registry. This driver was then registered to be used via LVGL.
-  The driver is responsible for lower level stuff like drawing pixels and communicating with the ESP32.
-  LVGL is an embedded graphics library and is described in the next section.
-
+  component via the ESP-IDF Component Registry. The driver is responsible for lower level stuff 
+  like drawing pixels and communicating with the ESP32. This driver was then registered to be used via LVGL.
+  
 ### LVGL (WORKING, NEEDS BEAUTIFICATION)
+  LVGL stands for Light and Versatile Graphics Library. It is an embedded graphics API and library and is the 
+  primary tool in creating the GUI for the device. While the display driver draws pixels, this creates entire 
+  pre-made widgets that can do a lot of cool stuff. It also allows me to easily implement the keypad navigation
+  into the GUI as well. I won't go into extreme depth as there is a lot of documentation on their website.
+
+  Documentation:
+  https://docs.lvgl.io/master/index.html
 
 
 ### Keypad (WORKING)
