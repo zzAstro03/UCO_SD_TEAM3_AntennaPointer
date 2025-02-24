@@ -1,0 +1,16 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.portWin": "COM6",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "sdkconfig.h": "c",
+        "lvgl.h": "c",
+        "array": "c",
+        "string": "c",
+        "bitset": "c",
+        "keypad.h": "c"
+    }
+}

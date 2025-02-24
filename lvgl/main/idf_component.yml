@@ -1,5 +1,0 @@
-dependencies:
-  atanisoft/esp_lcd_ili9488:
-    version: ~1.0.0
-  idf: '>=4.4.2'
-  lvgl/lvgl: '>=8.0.0,<9.0.0'

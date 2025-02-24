@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\Users\natha\Desktop\test\ICMTest\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Users\natha\Desktop\AntennaPointer\ICMTest\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

@@ -5,8 +5,8 @@
 #include "driver/i2c.h"
 #include "icm20948.h"
 
-#define I2C_MASTER_SCL_IO  	37				    /*!< gpio number for I2C master clock YELLOW WIRE*/
-#define I2C_MASTER_SDA_IO  	38  				/*!< gpio number for I2C master data  BLUE WIRE*/
+#define I2C_MASTER_SCL_IO  	38				    /*!< gpio number for I2C master clock YELLOW WIRE*/
+#define I2C_MASTER_SDA_IO  	37  				/*!< gpio number for I2C master data  BLUE WIRE*/
 #define I2C_MASTER_NUM     	I2C_NUM_0 			/*!< I2C port number for master dev */
 #define I2C_MASTER_FREQ_HZ 	400000    			/*!< I2C master clock frequency */
 #define PI 3.14159265358979323846
@@ -94,16 +94,17 @@ icm_read_task(void *args)
 
 	icm20948_sensor_data_t sensorData;
 	icm20948_raw_sensor_data_t rawSensorData;
-
+	int count = 0;
         while(1){
-			/*
+			
             ret = icm20948_get_acce(icm20948, &sensorData);
             float elevation = -1*atan(sensorData.acce_z/sqrt(pow(sensorData.acce_x, 2) + pow(sensorData.acce_y,2)))*180/PI+90;
-            if(ret == ESP_OK){
-                ESP_LOGI(TAG, "ax: %lf ay: %lf az: %lf", sensorData.acce_x, sensorData.acce_y, sensorData.acce_z);
-                ESP_LOGI(TAG, "Elevation: %lf", elevation);
-            }
+            /*if(ret == ESP_OK){
+                //ESP_LOGI(TAG, "ax: %lf ay: %lf az: %lf", sensorData.acce_x, sensorData.acce_y, sensorData.acce_z);
+                ESP_LOGI(TAG, "Elevation: %lf degrees", elevation);
+            }*/
 
+			/*
 			ret = icm20948_get_gyro(icm20948, &sensorData);
 			if (ret == ESP_OK)
 				ESP_LOGI(TAG, "gx: %lf gy: %lf gz: %lf", sensorData.gyro_x, sensorData.gyro_y, sensorData.gyro_z);
@@ -116,7 +117,7 @@ icm_read_task(void *args)
 
 
 */ 
-			ret = icm20948_get_acce(icm20948, &sensorData);
+			//ret = icm20948_get_acce(icm20948, &sensorData);
 			ret = icm20948_get_raw_mag(icm20948, &rawSensorData);
 			float Gx = sensorData.acce_x;
 			float Gy = sensorData.acce_y;
@@ -141,28 +142,23 @@ icm_read_task(void *args)
 			float azimuthY = acos(AdotBy /  (magA * magBy))*180/PI;
 			float azimuthZ = acos(AdotBz /  (magA * magBz))*180/PI;
 
-			// Average last 10 inputs, probably wont use
-			if(0){
-				for(int i = 10; i > 0; i--){
-					dataStorage[i] = dataStorage[i-1];
-				}
-				dataStorage[0] = azimuthX;
-
-				averageAzimuth = 0;
-				for(int i = 0; i < 11; i++){
-					averageAzimuth += dataStorage[i];
-				}				
-			}
-
-
 			if (ret == ESP_OK){
-				ESP_LOGI(TAG, "mx: %lf my: %lf mz: %lf uT", Hx, Hy, Hz);
+				//ESP_LOGI(TAG, "mx: %lf my: %lf mz: %lf uT", Hx, Hy, Hz);
 				
 				//ESP_LOGI(TAG, "AzimuthX: %lf AzimuthY: %lf AzimuthZ: %lf", azimuthX, azimuthY, azimuthZ);
 				//ESP_LOGI(TAG, "AzimuthX: %lf degrees", azimuthX);
 				//ESP_LOGI(TAG, "AzimuthY: %lf degrees", azimuthY);
 				//ESP_LOGI(TAG, "AzimuthZ: %lf degrees", azimuthZ);
+				
+				if(count == 500){
+					ESP_LOGI(TAG, "Azimuth: %lf degrees", azimuthY);
+					ESP_LOGI(TAG, "Elevation: %lf degrees\n", elevation);
+					count = 0;
+				}
+				
 			}
+
+			count = count + 1;
 
             //vTaskDelay(1 / portTICK_PERIOD_MS);
         }

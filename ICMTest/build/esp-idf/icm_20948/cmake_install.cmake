@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/natha/Desktop/test/ICMTest/components/icm_20948
+# Install script for directory: C:/Users/natha/Desktop/AntennaPointer/ICMTest/components/icm_20948
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
