@@ -13,8 +13,8 @@
   ...
 
 ## Goals
-  For the first semester, the goal was to primarily get a physical design done all of the individual electrical components working. 
-  We were successful.
+  For the first semester, the goal was to primarily get a physical design started and all of the individual electrical components working 
+  at a basiv level. We were successful.
 
   The goal for this semester is to finalize the device. Currently, the custom keypad PCB has been created, soldered, and programmed.
   A rudimentary GUI has been programmed to the display and allows the user to interact with it via the keypad. This allows
@@ -29,8 +29,10 @@
   This adjusted data is what will then be put on the outputs screen as described above.
 
   After that, the device will be finished on the electrical side. I would like to do some quality of life improvements if I can get there.
-  
 
+  The mechanical design is focusing on the shell for the device, the silicone keys to protect the PCB keypad and waterproof the device,
+  and creating a clamp that can attach to the side or back of an antenna to mount the device on.
+  
 ## Components
 ### ESP32-S3-DevKitC-1 v1.1 (WORKING)
   This is the main brain of the entire device. It is a microcontroller capable of controlling
