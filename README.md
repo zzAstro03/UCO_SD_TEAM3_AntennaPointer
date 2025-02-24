@@ -14,7 +14,7 @@
 
 ## Goals
   For the first semester, the goal was to primarily get a physical design started and all of the individual electrical components working 
-  at a basiv level. We were successful.
+  at a basic level. We were successful.
 
   The goal for this semester is to finalize the device. Currently, the custom keypad PCB has been created, soldered, and programmed.
   A rudimentary GUI has been programmed to the display and allows the user to interact with it via the keypad. This allows
