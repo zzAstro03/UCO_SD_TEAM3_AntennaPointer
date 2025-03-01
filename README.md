@@ -41,7 +41,7 @@
   ESP-IDF v5.4.0
   https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32/get-started/index.html
 
-### ICM20948 (WORKING, NOT IMPLEMENTED, NEEDS CALIBRATION)
+### Adafruit TDK Invensense ICM20948 (WORKING, NOT IMPLEMENTED, NEEDS CALIBRATION)
   The orientation of the device is determined by an ICM20948. This is a 9 degree of freedom inertial
   measurement unit that includes an accelerometer, gyroscope, and magnetometer. By using the data
   output from this sensor, the device's orientation can be determined.
@@ -85,8 +85,8 @@
 
 ### Keypad (WORKING)
   The keypad is a custom keypad created by yours truly. The primary use of this is to navigate the 
-  display's input and output screens. The input screen allows the user to input the necessary information 
-  to calculate magnetic declination and get the antenna offset. The output screens output the adjusted azimuth
+  display's input and output screens. The input screen allows the user to input the antenna offset as well as the 
+  necessary information to calculate magnetic declination. The output screen displays the adjusted azimuth
   and elevation from the sensor.
 
   I designed the keypad in KiCad and had it sent to PCBWay to be created. It is a matrix keypad that has the keys:
