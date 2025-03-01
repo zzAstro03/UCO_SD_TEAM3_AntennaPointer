@@ -5,10 +5,6 @@
   Working with the FAA, the device is to aid in the installation of antennas by replacing
   a plumb bob and compass with a single digital device. This will save time and money.
 
-  This GitHub currently focuses more on the electrical engineering side of things as that is what
-  I (Nathaniel) am personally responsible for, but will work with my team to update it to include the mechanical side
-  of things as well.
-
 ## Design
   ...
 
