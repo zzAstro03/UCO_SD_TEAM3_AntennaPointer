@@ -35,10 +35,13 @@
   various peripherals. It was chosen due to its widespread support and low power consumption.
   It is currently being programmed via ESP-IDF v5.4.0 with a majority of the code being written in C.
 
-  Board:
-  https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html
+  Part:
+  https://www.adafruit.com/product/5312
   <br />
-  ESP-IDF v5.4.0
+  Datasheet:
+  [https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html)
+  <br />
+  ESP-IDF v5.4.0:
   https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32/get-started/index.html
 
 ### Adafruit TDK Invensense ICM20948 (WORKING, NOT IMPLEMENTED, NEEDS CALIBRATION)
@@ -46,7 +49,7 @@
   measurement unit that includes an accelerometer, gyroscope, and magnetometer. By using the data
   output from this sensor, the device's orientation can be determined.
 
-  Adafruit:
+  Part:
   https://www.adafruit.com/product/4554
   <br />
   Datasheet:
@@ -72,6 +75,12 @@
   the user to interact with the device via the keypad. A driver was downloaded from the atanisoft
   component via the ESP-IDF Component Registry. The driver is responsible for lower level stuff 
   like drawing pixels and communicating with the ESP32. This driver was then registered to be used via LVGL.
+
+  Part:
+  https://a.co/d/5So4UNi
+  <br />
+  Datasheet:
+  https://www.hpinfotech.ro/ILI9488.pdf
   
 ### LVGL (WORKING, NEEDS BEAUTIFICATION)
   LVGL stands for Light and Versatile Graphics Library. It is an embedded graphics API and library and is the 
@@ -84,17 +93,15 @@
 
 
 ### Keypad (WORKING)
-  The keypad is a custom keypad created by yours truly. The primary use of this is to navigate the 
-  display's input and output screens. The input screen allows the user to input the antenna offset as well as the 
-  necessary information to calculate magnetic declination. The output screen displays the adjusted azimuth
-  and elevation from the sensor.
-
-  I designed the keypad in KiCad and had it sent to PCBWay to be created. It is a matrix keypad that has the keys:
+  The keypad is a custom keypad created by yours truly. I designed the keypad in KiCad and had it sent to PCBWay to be created.
   <br />
-  0 1 2 3 4 5 6 7 8 9 . Enter Backspace Up Down Left Right
+  It is a matrix keypad that has the keys: 0 1 2 3 4 5 6 7 8 9 "." Enter Backspace Up Down Left Right
+  <br />
+  The primary use of this is to navigate the display's input and output screens. The input screen allows the 
+  user to input the antenna offset as well as the necessary information to calculate magnetic declination. 
+  The output screen displays the adjusted azimuth and elevation from the sensor.
 
-  The circuit and PCB schematics are in the Design folder. 
-
+  The circuit and PCB schematics are in the Design folder.
 
 ### Battery Management System (WORKING)
   The BMS chosen is a diymore 18650 battery shield. The battery shield controls the charging and
